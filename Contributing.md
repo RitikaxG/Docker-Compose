@@ -104,7 +104,7 @@ contributing: |
     DATABASE_URL=postgresql://postgres:mysecretpassword@postgres_container:5432/postgres
     ```
 
-    this allow you to run postgres using docker and use it inside another docker container (docker-app:v1) which you build by specifying --network postgres_network while running the docker-app:v1 container
+    this allow you to run postgres using docker (postgres_container) and use it inside another docker container (docker-app:v1) which you start by specifying --network postgres_network (imp)
 
   - Build the image
 
@@ -117,5 +117,6 @@ contributing: |
   ```bash
   docker run --network postgres_network -p 3000:3000 -d docker-app:v1
   ```
+  The server should be running on http://localhost:3000 🚀
 
   
