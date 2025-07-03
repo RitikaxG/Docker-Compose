@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "build" : "tsc -b",
-    "dev:docker" : "node dist/index.js",
+    "dev:docker" : "npx prisma migrate dev && node dist/index.js",
     "dev" : "npm run build && npm run dev:docker"
   },
   "keywords": [],
